@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>智能健身打卡器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>智能健身打卡器</h1>
+      <div id="streak" class="streak">连续打卡：0 天</div>
+    </header>
+
+    <section class="checkin">
+      <button id="checkBtn" class="big-btn">今天已完成</button>
+      <div id="todayStatus" class="status"></div>
+    </section>
+
+    <section class="log">
+      <h2>训练日志</h2>
+      <textarea id="logInput" placeholder="记录今天训练内容，例如：慢跑30分钟，深蹲4组..." rows="4"></textarea>
+    </section>
+
+    <section class="nutrition">
+      <h2>能量看板</h2>
+      <div class="row">
+        <label>蛋白质 (g)
+          <input id="protein" type="number" min="0" value="0" />
+        </label>
+        <label>碳水 (g)
+          <input id="carbs" type="number" min="0" value="0" />
+        </label>
+        <label>脂肪 (g)
+          <input id="fat" type="number" min="0" value="0" />
+        </label>
+      </div>
+      <div class="row">
+        <label>运动消耗热量 (kcal)
+          <input id="exercise" type="number" min="0" value="0" />
+        </label>
+      </div>
+      <div class="summary">
+        <div>食物总热量：<span id="foodCal">0</span> kcal</div>
+        <div>净热量（食物 - 运动）：<span id="netCal">0</span> kcal</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>数据保存在本地浏览器，刷新不会丢失。</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
